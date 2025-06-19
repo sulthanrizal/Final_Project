@@ -1,0 +1,56 @@
+.section-hero {
+  position: relative;
+
+  .hero-background {
+    background: #1190a3;
+    height: 1120px;
+    position: relative;
+    border-radius: 45px;
+  }
+
+  .hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      top: 240px;
+      padding-left: 77px;
+
+      h1 {
+        font-size: 64px;
+        width: 970px;
+
+        span {
+          color: #21faff;
+        }
+      }
+
+      p {
+        width: 745px;
+      }
+
+      .link-hero {
+        background: #1e7b89;
+        display: inline-block;
+        margin-top: 40px;
+        padding: 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 600;
+        color: white; // Biar tulisannya kelihatan
+      }
+    }
+  }
+}

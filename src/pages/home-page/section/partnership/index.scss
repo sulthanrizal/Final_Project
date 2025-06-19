@@ -1,0 +1,27 @@
+.section-partnership {
+  padding: 40px 0px;
+  background: #0a4952;
+  .title-partnership {
+    position: relative;
+    margin-bottom: 40px;
+    .ellipse5 {
+      position: relative;
+      top: 0;
+      width: 200px;
+      height: 250px;
+    }
+    h2 {
+      position: absolute;
+      top: 0;
+      font-weight: 500;
+      top: 73px;
+      left: 69px;
+      font-size: 55px;
+      width: 850px;
+    }
+  }
+  .body-partnership {
+    text-align: center;
+    font-size: 25px;
+  }
+}

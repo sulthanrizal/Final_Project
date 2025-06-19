@@ -1,0 +1,35 @@
+.container-header {
+  background: #0a4952;
+  display: flex;
+  padding: 15px 40px;
+  justify-content: space-between;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: fixed;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  width: 100%;
+  z-index: 5;
+  .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .logo {
+      width: 46px;
+      height: 50px;
+    }
+    .title {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    a {
+      cursor: pointer;
+    }
+  }
+}
