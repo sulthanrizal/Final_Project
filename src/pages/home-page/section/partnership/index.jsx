@@ -1,5 +1,7 @@
 import Ellipse from "../../../../assets/ellipse5.png";
+import { AmountPartnership } from "./card-item/amount-partnership";
 import "./index.scss";
+import SliderAgency from "./slider";
 
 function Partnership() {
   return (
@@ -13,7 +15,13 @@ function Partnership() {
           Temukan lebih dari 1.150 Agensi Event Organizer yang siap membantu
           Anda di setiap sudut Indonesia.
         </p>
-        <div className="amount-category"></div>
+        <div className="category">
+          <AmountPartnership />
+        </div>
+        <p>Semua Agensi ini Tersebar di Seluruh Indonesia</p>
+        <div className="slider">
+          <SliderAgency />
+        </div>
       </div>
     </section>
   );

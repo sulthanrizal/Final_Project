@@ -21,7 +21,12 @@
     }
   }
   .body-partnership {
-    text-align: center;
+    p {
+      text-align: center;
+    }
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     font-size: 25px;
   }
 }

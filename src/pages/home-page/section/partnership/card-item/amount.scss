@@ -1,0 +1,35 @@
+.amount-category {
+  padding: 0px 130px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  .category-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .category-name {
+      .category-info {
+        padding-bottom: 12px;
+        display: flex;
+        align-items: end;
+        p {
+          font-size: 64px;
+          line-height: 0.95;
+          font-weight: 500;
+          padding-right: 10px;
+        }
+        span {
+          font-size: 20px;
+        }
+      }
+      .underline {
+        width: 100%;
+        height: 8px;
+        background-color: #06c4cb;
+        border-radius: 8px;
+      }
+    }
+  }
+}
