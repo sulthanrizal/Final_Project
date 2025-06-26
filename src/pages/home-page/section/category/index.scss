@@ -2,6 +2,7 @@
   z-index: 2;
   position: relative;
   margin-top: 100px;
+  margin-bottom: 500px;
 
   h1 {
     font-size: 50px;
@@ -16,6 +17,12 @@
   .container-card {
     position: relative;
     padding: 0px 65px;
+    .card:hover {
+      background: #0a4952;
+      p {
+        color: white;
+      }
+    }
     .card {
       position: absolute;
       border: 1px solid #0a4952;
@@ -24,6 +31,7 @@
       border-top-right-radius: 20px;
       width: max-content;
       padding: 30px;
+
       p {
         color: black;
         font-size: 20px;
@@ -47,10 +55,30 @@
       top: 135px;
       left: 210px;
     }
+    .content-card5 {
+      top: 248px;
+      right: 633px;
+    }
+    .content-card6 {
+      top: 248px;
+      right: 1020px;
+    }
+    .content-card7 {
+      top: 383px;
+      right: 540px;
+    }
+    .content-card8 {
+      top: 383px;
+      right: 900px;
+    }
+    .content-card9 {
+      top: 383px;
+      right: 1300px;
+    }
   }
   .content-img {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 100px;
+    right: 65px;
   }
 }
