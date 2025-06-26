@@ -1,0 +1,42 @@
+.card-profile {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 72px;
+
+  .card-item {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 43px 45px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); // << ini dia
+    .icon {
+      width: 74px;
+      height: 74px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 52px;
+      border-radius: 100000px;
+      background: linear-gradient(
+        90deg,
+        rgba(42, 188, 210, 1) 25%,
+        rgba(30, 123, 137, 0.97) 80%
+      );
+    }
+    span {
+      font-weight: 600;
+      font-size: 20px;
+      color: black;
+    }
+    p {
+      width: 250px;
+      color: black;
+      font-weight: 300;
+      font-size: 14px;
+      margin: 0px !important;
+    }
+  }
+}

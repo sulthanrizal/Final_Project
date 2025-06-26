@@ -13,7 +13,7 @@ export default function SliderAgency() {
 
     slides: {
       perView: 6,
-      spacing: 15,
+      spacing: 57,
     },
 
     created(s) {
@@ -29,6 +29,7 @@ export default function SliderAgency() {
 
   return (
     <div ref={sliderRef} className="keen-slider">
+      <div className="gradiant-left"></div>
       <div className="keen-slider__slide slide">
         <img src={Freska} alt="Freska" />
       </div>
@@ -50,12 +51,7 @@ export default function SliderAgency() {
       <div className="keen-slider__slide slide">
         <img src={Freska} alt="Freska" />
       </div>
-      <div className="keen-slider__slide slide">
-        <img src={Freska} alt="Freska" />
-      </div>
-      <div className="keen-slider__slide slide">
-        <img src={Freska} alt="Freska" />
-      </div>
+      <div className="gradiant-right"></div>
     </div>
   );
 }

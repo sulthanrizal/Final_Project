@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Hero from "../../../../assets/hero.png";
 import "./index.scss";
 
-function SectionHero() {
+export function HeroSection() {
   return (
     <section className="section-hero">
       <div className="hero-background"></div>
@@ -26,4 +26,3 @@ function SectionHero() {
     </section>
   );
 }
-export default SectionHero;

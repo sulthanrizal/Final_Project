@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { categoryAgency } from "../../../../../dummy/data";
+import { categoryAgency } from "../../../../../dummy/data-agency";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import "./amount.scss";
 
 export function AmountPartnership() {
   const visibleCategories = categoryAgency.slice(0, 3);
-  const hiddenCategories = categoryAgency.slice(3);
+  const hiddenCategories = categoryAgency.slice(4);
   const otherAgenciesCount = hiddenCategories.reduce(
     (total, category) => total + category.agencies.length,
     0

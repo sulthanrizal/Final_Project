@@ -1,11 +1,15 @@
 import "./index.scss";
-import SectionHero from "./section/hero";
-import Partnership from "./section/partnership";
+import { CategorySection } from "./section/category";
+import { HeroSection } from "./section/hero";
+import { PartnershipSection } from "./section/partnership";
+import { ProfileSection } from "./section/profile";
 export default function HomePage() {
   return (
     <div className="container-home">
-      <SectionHero />
-      <Partnership />
+      <HeroSection />
+      <PartnershipSection />
+      <ProfileSection />
+      <CategorySection />
     </div>
   );
 }

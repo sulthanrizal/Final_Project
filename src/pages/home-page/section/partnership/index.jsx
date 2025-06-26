@@ -2,8 +2,7 @@ import Ellipse from "../../../../assets/ellipse5.png";
 import { AmountPartnership } from "./card-item/amount-partnership";
 import "./index.scss";
 import SliderAgency from "./slider";
-
-function Partnership() {
+export function PartnershipSection() {
   return (
     <section className="section-partnership">
       <div className="title-partnership">
@@ -26,4 +25,3 @@ function Partnership() {
     </section>
   );
 }
-export default Partnership;
