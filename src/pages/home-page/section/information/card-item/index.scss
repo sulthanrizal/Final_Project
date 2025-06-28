@@ -31,10 +31,14 @@
       );
     }
     .teks {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
       h3 {
         font-size: 40px;
         font-weight: 600;
         color: #206e7a;
+        padding-left: 25px;
       }
       .underline {
         width: 100%;

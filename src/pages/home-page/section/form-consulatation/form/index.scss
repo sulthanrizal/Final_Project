@@ -1,0 +1,62 @@
+.consultation-form {
+  border-radius: 20px;
+  border: 1px solid white;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.08);
+  .form-content {
+    padding: 46px 26px 60px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    .form-row {
+      display: flex;
+      gap: 41px;
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .input-label {
+          color: black;
+        }
+        .input-field {
+          width: 326px;
+          height: 65px;
+          border-radius: 8px;
+          border: 1px solid white;
+          box-shadow: 0 0 16px rgba(0, 0, 0, 0.08);
+        }
+      }
+    }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      .input-label {
+        color: black;
+      }
+      .input-field {
+        height: 173px;
+        padding-left: 10px;
+        border-radius: 8px;
+        border: 1px solid white;
+        box-shadow: 0 0 16px rgba(0, 0, 0, 0.08);
+        outline: none;
+      }
+      .textarea {
+        height: 0;
+        padding: 20px 20px 173px 10px;
+      }
+    }
+    .button-wrapper {
+      button {
+        width: 100%;
+        background: #1190a3;
+        border: 1px solid #1190a3;
+        padding: 30px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+}
