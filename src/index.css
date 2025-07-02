@@ -1,14 +1,15 @@
-:root {
+:root,
+input::placeholder {
   font-family: "Poppins";
 }
-
 * {
   color: white;
   margin: 0;
 }
 
 input,
-textarea {
+textarea,
+input::placeholder {
   color: black;
 }
 

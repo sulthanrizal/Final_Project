@@ -1,21 +1,26 @@
-import { useState } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/home-page";
 import SearchAgency from "./pages/search-agency";
-import Header from "./components/header";
+import { Login } from "./login";
+import { Register } from "./login/register";
+import Layout from "./components/Layout";
+import { ProfileAgency } from "./pages/profile-agency";
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route element={<Layout />}>
+          <Route path="/home" element={<HomePage />} />
           <Route path="/search-agency" element={<SearchAgency />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+          <Route path="/profile-agency/:id" element={<ProfileAgency />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

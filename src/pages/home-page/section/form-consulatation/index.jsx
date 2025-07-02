@@ -14,9 +14,9 @@ export function FormConsultation() {
         <div className="title">
           <div className="title-left">
             <img src={Logo} />
-            <div className="title-teks">
+            <div className="title-text">
               <h3>EventMatch.id</h3>
-              <p>for all circles</p>
+              <p style={{ lineHeight: "1.2" }}>for all circles</p>
             </div>
           </div>
           <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: "36px" }} />

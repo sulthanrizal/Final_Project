@@ -10,6 +10,7 @@
   box-sizing: border-box;
   width: 100%;
   z-index: 5;
+  top: 0;
   .logo-title {
     display: flex;
     align-items: center;
@@ -29,7 +30,24 @@
     align-items: center;
     gap: 100px;
     a {
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      color: #2abcd2;
       cursor: pointer;
+    }
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      button {
+        cursor: pointer;
+        background: #2abcd2;
+        border: 1px solid #2abcd2;
+        border-radius: 5px;
+        padding: 5px 10px;
+      }
     }
   }
 }

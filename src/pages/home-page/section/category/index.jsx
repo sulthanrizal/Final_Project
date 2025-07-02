@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./index.scss";
-import { categoryAgency } from "../../../../dummy/data-agency";
+import { dataAgency } from "../../../../dummy/data-agency";
 import ImgPeople from "../../../../assets/img-people.png";
 
 export function CategorySection() {
@@ -10,7 +10,7 @@ export function CategorySection() {
   useEffect(() => {
     let temp = [];
     for (let i = 0; i < amountCategory; i++) {
-      temp = [...temp, ...categoryAgency.map((item) => item.nameCategory)];
+      temp = [...temp, ...dataAgency.map((item) => item.nameCategory)];
     }
     setCategory(temp);
   }, []);

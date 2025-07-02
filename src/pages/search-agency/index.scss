@@ -1,0 +1,113 @@
+.container-search {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding-bottom: 50px;
+  .wrapper-search {
+    position: relative;
+    .img-search {
+      width: 100%;
+      position: absolute;
+      top: 0;
+    }
+    .col-search {
+      position: relative;
+      z-index: 2;
+      padding: 131px 100px 0px 100px;
+      .search {
+        padding: 47px 117px;
+        background: #04535f;
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+
+        h2 {
+          font-size: 24px;
+          font-weight: 500;
+        }
+        .filter-group {
+          display: flex;
+          gap: 10px;
+          select {
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+          }
+        }
+        .filter-actions {
+          display: flex;
+          gap: 23px;
+
+          .button {
+            padding: 10px 100px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 700;
+          }
+
+          .filter {
+            border: 1px solid #1e7b89;
+            background-color: #04535f;
+          }
+          .reset {
+            background: white;
+            border: 1px solid #1e7b89;
+            color: #1e7b89;
+          }
+        }
+        .col-input {
+          display: flex;
+          width: 100%;
+          position: relative;
+          .icon {
+            width: 30px;
+            height: 31px;
+            position: absolute;
+            z-index: 2;
+            top: 18px;
+            left: 32px;
+          }
+          svg path {
+            color: #4f4f4f;
+          }
+          .group-input {
+            width: 100%;
+            display: flex;
+
+            .input-field {
+              padding: 25px 88px;
+              position: relative;
+              border-bottom-left-radius: 5px;
+              border-top-left-radius: 5px;
+              border: 1px solid white;
+              width: 100%;
+              outline: none;
+            }
+            input::placeholder {
+              color: #9b9b9b;
+              font-weight: 600;
+            }
+            .button-search {
+              background: #1190a3;
+              border: 1px solid #1190a3;
+              border-bottom-right-radius: 15px;
+              border-top-right-radius: 15px;
+              padding: 25px 45px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .text-mid {
+    color: #04535f;
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
+  }
+}
