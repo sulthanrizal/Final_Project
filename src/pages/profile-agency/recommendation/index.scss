@@ -1,0 +1,17 @@
+.recommendation-section {
+  padding: 40px 100px;
+  background-color: #fff;
+
+  .section-title {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #1190a3;
+  }
+
+  .recommendation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    justify-content: center;
+  }
+}

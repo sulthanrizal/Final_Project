@@ -21,6 +21,9 @@
 }
 .profile-content {
   padding: 100px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
   .profile-card {
     padding: 40px;
     background: linear-gradient(to right, #0a4952, #1190a3);

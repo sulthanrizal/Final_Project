@@ -24,7 +24,10 @@ export function CardItemAgency({ data }) {
               <div className="group-header">
                 <p>{item.nameCompany}</p>
                 <div className="group-header-bottom">
-                  <IconStar amount={item.rating} />
+                  <div style={{ color: "#ffc107" }}>
+                    {"★".repeat(item.rating)}
+                    {"☆".repeat(5 - item.rating)}
+                  </div>
                   <p className="riview">
                     {"("}
                     {item.amountRiview} Review {")"}

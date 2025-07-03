@@ -6,6 +6,7 @@ import { Login } from "./login";
 import { Register } from "./login/register";
 import Layout from "./components/Layout";
 import { ProfileAgency } from "./pages/profile-agency";
+import BookingAgency from "./pages/booking-agency";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/search-agency" element={<SearchAgency />} />
           <Route path="/profile-agency/:id" element={<ProfileAgency />} />
+          <Route path="/booking-agency/:id" element={<BookingAgency />} />
         </Route>
       </Routes>
     </BrowserRouter>

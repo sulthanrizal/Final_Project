@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import { useUser } from "../../context/UserContext";
 import "./index.scss";
@@ -22,17 +22,17 @@ export default function Header() {
         </div>
       </div>
       <div className="navbar">
-        <a href="/home">Beranda</a>
-        <a href="/search-agency">Cari Agency</a>
-        <a>Kategory</a>
-        <a>Daftarkan Agency</a>
+        <NavLink to="/home">Beranda</NavLink>
+        <NavLink to="/search-agency">Cari Agency</NavLink>
+        <NavLink to="/category">Kategori</NavLink>
+        <NavLink to="/register-agency">Daftarkan Agency</NavLink>
         {isLoggedIn ? (
           <div className="user-info">
             <span>Halo, {userName}</span>
             <button onClick={handleLogout}>Logout</button>
           </div>
         ) : (
-          <a href="/login">Login</a>
+          <NavLink to="/login">Login</NavLink>
         )}
       </div>
     </div>

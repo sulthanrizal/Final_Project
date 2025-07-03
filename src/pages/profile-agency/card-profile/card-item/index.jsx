@@ -14,7 +14,11 @@ import {
   faTiktok,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link, useParams } from "react-router-dom";
+
 export function CardItemProfile() {
+  const { id } = useParams();
+
   return (
     <>
       <div className="agency-profile__info-grid">
@@ -176,9 +180,12 @@ export function CardItemProfile() {
               </div>
             </div>
           </div>
-          <button className="agency-profile__booking-button">
+          <Link
+            to={`/booking-agency/${id}`}
+            className="agency-profile__booking-button"
+          >
             Booking Agensi
-          </button>
+          </Link>
         </div>
         <div
           className="agency-profile__packages group1-right"

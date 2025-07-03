@@ -2,9 +2,10 @@ import "./index.scss";
 import { useParams } from "react-router-dom";
 import { dataAgency } from "../../dummy/data-agency";
 import Group8 from "../../assets/Group8.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { CardProfile } from "./card-profile";
+import { PortfolioProfile } from "./portofolio";
+import { TestimoniProfile } from "./testimoni";
+import { Recommendation } from "./recommendation/index.";
 
 export function ProfileAgency() {
   const { id } = useParams();
@@ -41,13 +42,11 @@ export function ProfileAgency() {
               <div className="profile-group1">
                 <h1 className="profile-name">{agency.nameCompany}</h1>
                 <div className="profile-rating">
-                  {[...Array(agency.rating)].map((_, i) => (
-                    <FontAwesomeIcon
-                      key={i}
-                      icon={faStar}
-                      className="icon-star"
-                    />
-                  ))}
+                  <div style={{ color: "#ffc107" }}>
+                    {"★".repeat(agency.rating)}
+                    {"☆".repeat(5 - agency.rating)}
+                  </div>
+
                   <span className="review-count">
                     ({agency.amountRiview} Review)
                   </span>
@@ -71,7 +70,10 @@ export function ProfileAgency() {
           </div>
           <CardProfile />
         </div>
+        <PortfolioProfile />
       </div>
+      <TestimoniProfile />
+      <Recommendation />
     </div>
   );
 }

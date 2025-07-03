@@ -1,8 +1,5 @@
 import Freska from "../assets/Freska.png";
 
-// nameCompany, address, amountRiview, nameCategory, price,;
-// rating: 4;
-
 const locations = ["Jakarta", "Surabaya", "Bandung", "Yogyakarta", "Medan"];
 const prices = ["10 Jt", "15 Jt", "20 Jt", "25 Jt", "30 Jt"];
 
@@ -21,7 +18,7 @@ export const dataAgency = [
       amountRiview: 2000,
       category: "Full Service Agenchy",
       price: getRandomElement(prices),
-      rating: 5,
+      rating: i % 2 === 0 ? 5 : 4,
     })),
   },
   {
@@ -36,7 +33,7 @@ export const dataAgency = [
       amountRiview: 2000,
       category: "Wedding Organizers",
       price: getRandomElement(prices),
-      rating: 5,
+      rating: i % 2 === 0 ? 5 : 4,
     })),
   },
   {
@@ -51,7 +48,7 @@ export const dataAgency = [
       amountRiview: 2000,
       category: "EO Spesialis MICE",
       price: getRandomElement(prices),
-      rating: 5,
+      rating: i % 2 === 0 ? 5 : 4,
     })),
   },
   {
@@ -66,7 +63,7 @@ export const dataAgency = [
       amountRiview: 2000,
       category: "Brand Activation Agency",
       price: getRandomElement(prices),
-      rating: 5,
+      rating: i % 2 === 0 ? 5 : 4,
     })),
   },
   {
@@ -81,7 +78,7 @@ export const dataAgency = [
       amountRiview: 2000,
       category: "EO Virtual & Hybrid",
       price: getRandomElement(prices),
-      rating: 5,
+      rating: i % 2 === 0 ? 5 : 4,
     })),
   },
 ];

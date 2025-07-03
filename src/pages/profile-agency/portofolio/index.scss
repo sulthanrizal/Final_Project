@@ -1,0 +1,26 @@
+.container-portofolio {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .portofolio-title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    .title-text {
+      color: #1190a3;
+      font-size: 32px;
+      font-weight: 600;
+      width: 460px;
+    }
+    .underline-title {
+      width: 100%;
+      height: 2px;
+      background-color: #1190a3;
+      border-radius: 8px;
+    }
+  }
+  .portofolio-content {
+    display: flex;
+    justify-content: space-between;
+  }
+}
