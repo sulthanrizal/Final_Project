@@ -109,7 +109,9 @@ export default function SearchAgency() {
                 value={locationFilter}
                 onChange={(e) => setLocationFilter(e.target.value)}
               >
-                <option value="">All Locations</option>
+                <option value="" style={{ color: "black" }}>
+                  All Locations
+                </option>
                 {uniqueLocations.map((location) => (
                   <option
                     key={location}
@@ -125,9 +127,15 @@ export default function SearchAgency() {
                 value={categoryFilter}
                 onChange={(e) => setCategoryFilter(e.target.value)}
               >
-                <option value="">All Categories</option>
+                <option value="" style={{ color: "black" }}>
+                  All Categories
+                </option>
                 {uniqueCategories.map((category) => (
-                  <option key={category} value={category}>
+                  <option
+                    key={category}
+                    value={category}
+                    style={{ color: "black" }}
+                  >
                     {category}
                   </option>
                 ))}
@@ -137,9 +145,11 @@ export default function SearchAgency() {
                 value={priceFilter}
                 onChange={(e) => setPriceFilter(e.target.value)}
               >
-                <option value="">All Prices</option>
+                <option value="" style={{ color: "black" }}>
+                  All Prices
+                </option>
                 {uniquePrices.map((price) => (
-                  <option key={price} value={price}>
+                  <option key={price} value={price} style={{ color: "black" }}>
                     {price}
                   </option>
                 ))}
