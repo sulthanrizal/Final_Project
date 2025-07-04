@@ -1,24 +1,39 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useUser } from "../context/UserContext"; // Import useUser
+import { useUser } from "../context/UserContext";
 import "./register.scss";
 
 export function Register() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [whatsapp, setWhatsapp] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const { registerUser } = useUser(); // Use the context
+  const { registerUser } = useUser();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError(null);
 
-    if (registerUser(fullName, email, password)) {
+    if (password !== confirmPassword) {
+      setError("Passwords do not match");
+      setLoading(false);
+      return;
+    }
+
+    try {
+      await registerUser({ fullName, email, password, phoneNumber });
       alert("Registration successful! Please login.");
       navigate("/login");
-    } else {
-      alert("Registration failed. User with this email already exists.");
+    } catch (err) {
+      setError(err.message);
+      alert(`Registration failed: ${err.message}`);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -54,16 +69,29 @@ export function Register() {
             required
           />
 
-          <label>Nomor WhatsApp</label>
+          <label>Konfirmasi Password</label>
           <input
-            type="tel"
-            placeholder="08xxxxxxxxxx"
-            value={whatsapp}
-            onChange={(e) => setWhatsapp(e.target.value)}
+            type="password"
+            placeholder="Konfirmasi password"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
             required
           />
 
-          <button type="submit">Daftar</button>
+          <label>Nomor Telepon</label>
+          <input
+            type="tel"
+            placeholder="Masukkan nomor telepon"
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
+            required
+          />
+
+          <button type="submit" disabled={loading}>
+            {loading ? 'Mendaftar...' : 'Daftar'}
+          </button>
+
+          {error && <p className="error-message">{error}</p>}
 
           <p className="register-link">
             Sudah punya akun? <Link to="/login">Login di sini</Link>

@@ -1,22 +1,30 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useUser } from "../context/UserContext"; // Import useUser
+import { useUser } from "../context/UserContext";
 import "./index.scss";
 
 export function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const { loginUser } = useUser(); // Use the context
+  const { loginUser } = useUser();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError(null);
 
-    if (loginUser(email, password)) {
+    try {
+      await loginUser(email, password);
       alert("Login successful!");
       navigate("/home");
-    } else {
-      alert("Invalid email or password.");
+    } catch (err) {
+      setError(err.message);
+      alert(`Login failed: ${err.message}`);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -43,7 +51,12 @@ export function Login() {
             required
           />
 
-          <button type="submit">Login</button>
+          <button type="submit" disabled={loading}>
+            {loading ? 'Logging in...' : 'Login'}
+          </button>
+
+          {error && <p className="error-message">{error}</p>}
+
           <p className="login-link">
             Belum punya akun? <Link to="/register">Daftar di sini</Link>
           </p>
