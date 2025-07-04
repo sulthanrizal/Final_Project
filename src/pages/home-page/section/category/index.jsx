@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./index.scss";
 import { dataAgency } from "../../../../dummy/data-agency";
 import ImgPeople from "../../../../assets/img-people.png";
@@ -7,6 +7,8 @@ export function CategorySection() {
   const amountCategory = 2;
   const [category, setCategory] = useState([]);
   const getCategory = category.slice(0, 9);
+  const sectionRef = useRef(null);
+
   useEffect(() => {
     let temp = [];
     for (let i = 0; i < amountCategory; i++) {
@@ -16,7 +18,11 @@ export function CategorySection() {
   }, []);
 
   return (
-    <section className="section-category">
+    <section
+      className="section-category"
+      id="category-section-id"
+      ref={sectionRef}
+    >
       <h1>Cari Sesuai Kategori Kamu</h1>
       <div className="container-card">
         {getCategory.map((item, index) => {
