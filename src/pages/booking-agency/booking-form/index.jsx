@@ -6,6 +6,7 @@ export function BookingForm({
   setCurrentStep,
   currentStep,
   formData,
+  agency,
 }) {
   const nextStep = () => setCurrentStep((prev) => prev + 1);
   const prevStep = () => setCurrentStep((prev) => prev - 1);
@@ -15,8 +16,8 @@ export function BookingForm({
     <div className="booking-form">
       {currentStep === 1 && (
         <form onSubmit={nextStep}>
+          <h3>Isi Biodata Anda</h3>
           <div className="form-step">
-            <h3>Isi Biodata Anda</h3>
             <div className="form-group">
               <label>Nama Lengkap</label>
               <input
@@ -25,7 +26,6 @@ export function BookingForm({
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleInputChange}
-                placeholder="John Doe"
               />
             </div>
             <div className="form-group">
@@ -36,7 +36,6 @@ export function BookingForm({
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                placeholder="john.doe@example.com"
               />
             </div>
             <div className="form-group">
@@ -47,7 +46,6 @@ export function BookingForm({
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                placeholder="081234567890"
               />
             </div>
             <div className="form-group">
@@ -58,22 +56,21 @@ export function BookingForm({
                 name="domicile"
                 value={formData.domicile}
                 onChange={handleInputChange}
-                placeholder="Jakarta Selatan"
               />
             </div>
-            <div className="step-navigation">
-              <button className="btn-next" type="submit">
-                Selanjutnya
-              </button>
-            </div>
+          </div>
+          <div className="step-navigation">
+            <button className="btn-next" type="submit">
+              Selanjutnya
+            </button>
           </div>
         </form>
       )}
 
       {currentStep === 2 && (
         <form onSubmit={nextStep}>
+          <h3>Detail Acara</h3>
           <div className="form-step">
-            <h3>Detail Acara</h3>
             <div className="form-group">
               <label>Jenis Acara</label>
               <input
@@ -82,7 +79,6 @@ export function BookingForm({
                 name="eventType"
                 value={formData.eventType}
                 onChange={handleInputChange}
-                placeholder="Pernikahan, Ulang Tahun, dll."
               />
             </div>
             <div className="form-group">
@@ -103,7 +99,6 @@ export function BookingForm({
                 name="eventLocation"
                 value={formData.eventLocation}
                 onChange={handleInputChange}
-                placeholder="Gedung Serbaguna, Jakarta"
               />
             </div>
             <div className="form-group">
@@ -114,7 +109,6 @@ export function BookingForm({
                 name="guestEstimate"
                 value={formData.guestEstimate}
                 onChange={handleInputChange}
-                placeholder="Contoh: 300"
               />
             </div>
             <div className="form-group">
@@ -165,17 +159,16 @@ export function BookingForm({
                 value={formData.notes}
                 onChange={handleInputChange}
                 rows="4"
-                placeholder="Contoh: Tema warna dominan biru navy dan gold."
               ></textarea>
             </div>
-            <div className="step-navigation">
-              <button onClick={prevStep} className="btn-prev">
-                Kembali
-              </button>
-              <button className="btn-next" type="submit">
-                Selanjutnya
-              </button>
-            </div>
+          </div>
+          <div className="step-navigation">
+            <button onClick={prevStep} className="btn-prev">
+              Kembali
+            </button>
+            <button className="btn-next" type="submit">
+              Selanjutnya
+            </button>
           </div>
         </form>
       )}

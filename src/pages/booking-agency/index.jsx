@@ -1,10 +1,10 @@
-import "./index.scss";
 import { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { dataAgency } from "../../dummy/data-agency";
 import BackgroundBooking from "../../assets/bg-booking.png";
 import { BookingForm } from "./booking-form";
-
+import { useUser } from "../../context/UserContext";
+import "./index.scss";
 const BookingAgency = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -62,8 +62,13 @@ const BookingAgency = () => {
     submissionData.append("paymentProof", formData.paymentProof);
 
     try {
+      const token = localStorage.getItem('token'); // Get token directly from localStorage
+      console.log("Frontend - Token from localStorage (before fetch):", token);
       const response = await fetch("http://localhost:3000/api/bookings", {
         method: "POST",
+        headers: {
+          "x-auth-token": token,
+        },
         body: submissionData,
       });
 
@@ -134,6 +139,7 @@ const BookingAgency = () => {
           setCurrentStep={setCurrentStep}
           currentStep={currentStep}
           formData={formData}
+          agency={agency}
         />
       </div>
     </div>

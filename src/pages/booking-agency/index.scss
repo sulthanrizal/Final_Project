@@ -93,60 +93,68 @@
     .booking-form {
       border-radius: 12px;
       padding: 30px;
-
-      .form-step {
-        h3 {
-          text-align: center;
-          color: white;
-          background: #1190a3;
-          padding: 15px 20px;
-          border-radius: 50px;
-        }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h3 {
+        color: white;
+        background: #1190a3;
+        padding: 15px 20px;
+        border-radius: 50px;
+        margin: 0 auto;
+        text-align: center;
+        width: fit-content;
       }
 
-      .form-group {
-        margin-bottom: 20px;
-        label {
-          display: block;
-          margin-bottom: 8px;
-          font-weight: bold;
-          color: #444;
+      .form-step {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0px 200px;
+        .form-group {
+          margin-bottom: 20px;
+          label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 32px;
+            color: #1190a3;
+          }
+          input[type="text"],
+          input[type="email"],
+          input[type="tel"],
+          input[type="date"],
+          input[type="number"],
+          input[type="time"],
+          select,
+          textarea {
+            width: 533px;
+            padding: 12px;
+            border: 1px solid #444444;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            &:focus {
+              outline: none;
+              border-color: #2abcd2;
+              box-shadow: 0 0 0 2px rgba(42, 188, 210, 0.2);
+            }
+          }
         }
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        input[type="date"],
-        input[type="number"],
-        input[type="time"],
-        select,
-        textarea {
-          width: 100%;
-          padding: 12px;
-          border: 1px solid #ccc;
-          border-radius: 6px;
-          font-size: 1rem;
-          box-sizing: border-box;
-          &:focus {
-            outline: none;
-            border-color: #2abcd2;
-            box-shadow: 0 0 0 2px rgba(42, 188, 210, 0.2);
+
+        .form-group-inline {
+          display: flex;
+          gap: 20px;
+          .form-group {
+            flex: 1;
           }
         }
       }
-
-      .form-group-inline {
-        display: flex;
-        gap: 20px;
-        .form-group {
-          flex: 1;
-        }
-      }
-
       .step-navigation {
         margin-top: 30px;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: center;
+        gap: 20px;
 
         .btn-prev,
         .btn-next,
@@ -177,64 +185,64 @@
           }
         }
       }
-    }
 
-    .confirmation {
-      .summary {
-        background-color: #f9f9f9;
-        padding: 20px;
+      .confirmation {
+        .summary {
+          background-color: #f9f9f9;
+          padding: 20px;
+          border-radius: 8px;
+          h4 {
+            margin-top: 0;
+            color: #2abcd2;
+          }
+          p {
+            margin: 5px 0;
+            line-height: 1.6;
+          }
+        }
+      }
+
+      .payment-step {
+        text-align: center;
+        .qris-image {
+          max-width: 250px;
+          margin: 20px auto;
+          display: block;
+        }
+        .payment-note {
+          font-style: italic;
+          color: #777;
+          max-width: 450px;
+          margin: 15px auto 0 auto;
+        }
+      }
+
+      .upload-area {
+        border: 2px dashed #ccc;
         border-radius: 8px;
-        h4 {
-          margin-top: 0;
+        padding: 40px 20px;
+        text-align: center;
+        cursor: pointer;
+        transition: border-color 0.3s ease;
+
+        &:hover {
+          border-color: #2abcd2;
+        }
+
+        input[type="file"] {
+          display: none;
+        }
+
+        .upload-label {
+          font-weight: bold;
           color: #2abcd2;
         }
-        p {
-          margin: 5px 0;
-          line-height: 1.6;
+
+        .file-name {
+          margin-top: 15px;
+          font-style: italic;
+          color: #555;
         }
-      }
-    }
-
-    .payment-step {
-      text-align: center;
-      .qris-image {
-        max-width: 250px;
-        margin: 20px auto;
-        display: block;
-      }
-      .payment-note {
-        font-style: italic;
-        color: #777;
-        max-width: 450px;
-        margin: 15px auto 0 auto;
-      }
-    }
-
-    .upload-area {
-      border: 2px dashed #ccc;
-      border-radius: 8px;
-      padding: 40px 20px;
-      text-align: center;
-      cursor: pointer;
-      transition: border-color 0.3s ease;
-
-      &:hover {
-        border-color: #2abcd2;
-      }
-
-      input[type="file"] {
-        display: none;
-      }
-
-      .upload-label {
-        font-weight: bold;
-        color: #2abcd2;
-      }
-
-      .file-name {
-        margin-top: 15px;
-        font-style: italic;
-        color: #555;
       }
     }
   }

@@ -40,6 +40,7 @@ export const UserProvider = ({ children }) => {
 
     const { token } = await response.json();
     localStorage.setItem('token', token);
+    console.log("UserContext - Token received and set:", token);
     const decoded = jwtDecode(token);
     setUserName(decoded.name);
     setIsLoggedIn(true);
@@ -70,7 +71,7 @@ export const UserProvider = ({ children }) => {
   };
 
   return (
-    <UserContext.Provider value={{ isLoggedIn, userName, loginUser, logoutUser, registerUser }}>
+    <UserContext.Provider value={{ isLoggedIn, userName, loginUser, logoutUser, registerUser, token }}>
       {children}
     </UserContext.Provider>
   );
