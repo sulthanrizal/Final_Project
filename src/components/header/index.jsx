@@ -35,9 +35,11 @@ export default function Header() {
       <div className="navbar">
         <NavLink to="/home">Beranda</NavLink>
         <NavLink to="/search-agency">Cari Agency</NavLink>
-        <NavLink to="/category-section" onClick={handleCategoryClick}>
-          Kategori
-        </NavLink>
+        {pathname === "/home" ? (
+          <NavLink to="/category-section-id" onClick={handleCategoryClick}>
+            Kategori
+          </NavLink>
+        ) : null}
         <NavLink to="/register-agency">Daftarkan Agency</NavLink>
         {isLoggedIn ? (
           <div className="user-info">
