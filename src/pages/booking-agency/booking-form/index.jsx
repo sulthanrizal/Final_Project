@@ -117,6 +117,7 @@ export function BookingForm({
                 name="selectedPackage"
                 value={formData.selectedPackage}
                 onChange={handleInputChange}
+                style={{ color: "black" }}
               >
                 <option value="">-- Pilih Paket --</option>
                 <option value="Reguler">
@@ -159,6 +160,7 @@ export function BookingForm({
                 value={formData.notes}
                 onChange={handleInputChange}
                 rows="4"
+                className="form-textarea"
               ></textarea>
             </div>
           </div>
@@ -174,48 +176,83 @@ export function BookingForm({
       )}
 
       {currentStep === 3 && (
-        <div className="form-step confirmation">
+        <div className="confirmation">
           <h3>Konfirmasi Pesanan</h3>
           <div className="summary">
-            <h4>Detail Agensi:</h4>
-            <p>
-              <strong>{agency.nameCompany}</strong>
-            </p>
-            <h4>Biodata:</h4>
-            <p>
-              <strong>Nama:</strong> {formData.fullName}
-            </p>
-            <p>
-              <strong>Email:</strong> {formData.email}
-            </p>
-            <p>
-              <strong>Telepon:</strong> {formData.phone}
-            </p>
-            <p>
-              <strong>Domisili:</strong> {formData.domicile}
-            </p>
-            <h4>Detail Acara:</h4>
-            <p>
-              <strong>Jenis:</strong> {formData.eventType}
-            </p>
-            <p>
-              <strong>Tanggal:</strong> {formData.eventDate}
-            </p>
-            <p>
-              <strong>Lokasi:</strong> {formData.eventLocation}
-            </p>
-            <p>
-              <strong>Estimasi Tamu:</strong> {formData.guestEstimate} orang
-            </p>
-            <p>
-              <strong>Paket:</strong> {formData.selectedPackage}
-            </p>
-            <p>
-              <strong>Waktu:</strong> {formData.startTime} - {formData.endTime}
-            </p>
-            <p>
-              <strong>Catatan:</strong> {formData.notes}
-            </p>
+            <div className="biodata form-group">
+              <h4>Biodata</h4>
+              <p>
+                <strong>Nama</strong> <br />
+                {formData.fullName}
+              </p>
+              <p>
+                <strong>Email</strong> <br />
+                {formData.email}
+              </p>
+              <p>
+                <strong>Telepon</strong> <br />
+                {formData.phone}
+              </p>
+              <p>
+                <strong>Domisili</strong>
+                <br /> {formData.domicile}
+              </p>
+            </div>
+            <div className="detail-event form-group">
+              <h4>Detail Acara</h4>
+              <div className="group">
+                <div className="group-left">
+                  <p>
+                    <strong>Tanggal Acara</strong> <br />
+                    {formData.eventDate}
+                  </p>
+                  <p>
+                    <strong>Estimasi Tamu Undangan</strong> <br />
+                    {formData.guestEstimate} Tamu Undangan
+                  </p>
+                  <p>
+                    <strong>Waktu</strong>
+                    <br /> {formData.startTime} - {formData.endTime} WIB
+                  </p>
+                  <p>
+                    <strong>Lokasi</strong> <br />
+                    {formData.eventLocation}
+                  </p>
+                </div>
+                <div className="group-right">
+                  <p>
+                    <strong>Jenis</strong>
+                    <br /> {formData.eventType}
+                  </p>
+                  <p>
+                    <strong>Paket</strong>
+                    <br />
+                    {formData.selectedPackage}
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              style={{ display: "flex", flexDirection: "column", gap: "20px" }}
+            >
+              <div
+                className="form-group notes"
+                style={{ border: "1px solid white" }}
+              >
+                <p>
+                  <h4>Catatan</h4> {formData.notes}
+                </p>
+              </div>
+              <div
+                className="form-group price"
+                style={{ border: "1px solid white" }}
+              >
+                <h4>Total Harga</h4>
+                <div>
+                  <p>Total Estimasi Biaya </p>
+                </div>
+              </div>
+            </div>
           </div>
           <div className="step-navigation">
             <button onClick={prevStep} className="btn-prev">
