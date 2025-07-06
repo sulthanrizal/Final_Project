@@ -14,7 +14,7 @@ export function BookingForm({
     "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=ContohUntukFinalProject";
   return (
     <div className="booking-form">
-      {currentStep === 1 && (
+      {/* {currentStep === 1 && (
         <form onSubmit={nextStep}>
           <h3>Isi Biodata Anda</h3>
           <div className="form-step">
@@ -65,9 +65,9 @@ export function BookingForm({
             </button>
           </div>
         </form>
-      )}
+      )} */}
 
-      {currentStep === 2 && (
+      {/* {currentStep === 2 && (
         <form onSubmit={nextStep}>
           <h3>Detail Acara</h3>
           <div className="form-step">
@@ -173,9 +173,9 @@ export function BookingForm({
             </button>
           </div>
         </form>
-      )}
+      )} */}
 
-      {currentStep === 3 && (
+      {/* {currentStep === 3 && (
         <div className="confirmation">
           <h3>Konfirmasi Pesanan</h3>
           <div className="summary">
@@ -263,9 +263,9 @@ export function BookingForm({
             </button>
           </div>
         </div>
-      )}
+      )} */}
 
-      {currentStep === 4 && (
+      {/* {currentStep === 4 && (
         <div className="form-step payment-step">
           <h3>Bayar DP</h3>
           <p>
@@ -290,10 +290,13 @@ export function BookingForm({
             </button>
           </div>
         </div>
-      )}
+      )} */}
 
-      {currentStep === 5 && (
-        <form className="form-step" onSubmit={handleSubmit}>
+      {currentStep === 1 && (
+        <form
+          className="form-step confirm payment-receipt"
+          onSubmit={handleSubmit}
+        >
           <h3>Upload Bukti Transfer</h3>
           <div className="form-group upload-area">
             <label htmlFor="file-upload" className="upload-label">
