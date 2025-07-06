@@ -119,14 +119,16 @@ export function BookingForm({
                 onChange={handleInputChange}
                 style={{ color: "black" }}
               >
-                <option value="">-- Pilih Paket --</option>
-                <option value="Reguler">
+                <option value="" style={{ color: "black" }}>
+                  -- Pilih Paket --
+                </option>
+                <option value="Reguler" style={{ color: "black" }}>
                   Paket Reguler (mulai dari 40 juta)
                 </option>
-                <option value="Premium">
+                <option value="Premium" style={{ color: "black" }}>
                   Paket Premium (mulai dari 78 juta)
                 </option>
-                <option value="Custom">
+                <option value="Custom" style={{ color: "black" }}>
                   Paket Custom (harga dapat disesuaikan)
                 </option>
               </select>

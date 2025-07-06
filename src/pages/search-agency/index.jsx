@@ -104,64 +104,116 @@ export default function SearchAgency() {
               </div>
             </div>
             <h2>Atau Dengan Filter</h2>
-            <div className="filter-group">
-              <select
-                value={locationFilter}
-                onChange={(e) => setLocationFilter(e.target.value)}
-              >
-                <option value="" style={{ color: "black" }}>
-                  All Locations
-                </option>
-                {uniqueLocations.map((location) => (
-                  <option
-                    key={location}
-                    value={location}
-                    style={{ color: "black" }}
+            <div className="filter-container">
+              <div className="filter-group">
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "5px",
+                  }}
+                >
+                  <h5
+                    style={{
+                      color: "black",
+                      color: "#1E7B89",
+                      fontSize: "20px",
+                    }}
                   >
-                    {location}
-                  </option>
-                ))}
-              </select>
-
-              <select
-                value={categoryFilter}
-                onChange={(e) => setCategoryFilter(e.target.value)}
-              >
-                <option value="" style={{ color: "black" }}>
-                  All Categories
-                </option>
-                {uniqueCategories.map((category) => (
-                  <option
-                    key={category}
-                    value={category}
-                    style={{ color: "black" }}
+                    Lokasi
+                  </h5>
+                  <select
+                    value={locationFilter}
+                    onChange={(e) => setLocationFilter(e.target.value)}
+                    style={{ width: "300px" }}
                   >
-                    {category}
-                  </option>
-                ))}
-              </select>
-
-              <select
-                value={priceFilter}
-                onChange={(e) => setPriceFilter(e.target.value)}
-              >
-                <option value="" style={{ color: "black" }}>
-                  All Prices
-                </option>
-                {uniquePrices.map((price) => (
-                  <option key={price} value={price} style={{ color: "black" }}>
-                    {price}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className="filter-actions">
-              <button className="button reset" onClick={handleReset}>
-                Reset
-              </button>
-              <button className="button filter" onClick={handleApplyFilters}>
-                Filter
-              </button>
+                    <option value=""></option>
+                    {uniqueLocations.map((location) => (
+                      <option
+                        key={location}
+                        value={location}
+                        style={{ color: "black" }}
+                      >
+                        {location}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "5px",
+                  }}
+                >
+                  <h5
+                    style={{
+                      color: "black",
+                      color: "#1E7B89",
+                      fontSize: "20px",
+                    }}
+                  >
+                    Category
+                  </h5>
+                  <select
+                    value={categoryFilter}
+                    onChange={(e) => setCategoryFilter(e.target.value)}
+                    style={{ width: "300px" }}
+                  >
+                    <option value=""></option>
+                    {uniqueCategories.map((category) => (
+                      <option
+                        key={category}
+                        value={category}
+                        style={{ color: "black" }}
+                      >
+                        {category}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "5px",
+                  }}
+                >
+                  <h5
+                    style={{
+                      color: "black",
+                      color: "#1E7B89",
+                      fontSize: "20px",
+                    }}
+                  >
+                    Budget
+                  </h5>
+                  <select
+                    value={priceFilter}
+                    onChange={(e) => setPriceFilter(e.target.value)}
+                    style={{ width: "300px" }}
+                  >
+                    <option value=""></option>
+                    {uniquePrices.map((price) => (
+                      <option
+                        key={price}
+                        value={price}
+                        style={{ color: "black" }}
+                      >
+                        {price}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+              <div className="filter-actions">
+                <button className="button reset" onClick={handleReset}>
+                  Reset
+                </button>
+                <button className="button filter" onClick={handleApplyFilters}>
+                  Filter
+                </button>
+              </div>
             </div>
           </div>
         </div>
