@@ -10,7 +10,7 @@ import { Recommendation } from "./recommendation/index.";
 export function ProfileAgency() {
   const { id } = useParams();
   const allAgencies = dataAgency.flatMap((group) => group.agencies);
-  const agency = allAgencies.find((_, i) => i === Number(id));
+  const agency = allAgencies.find((item) => item.id === Number(id));
 
   const reason = [
     "✅ Konsultasi Konsep Gratis – mulai dari tema tradisional, rustic, hingga modern minimalis",
@@ -28,6 +28,8 @@ export function ProfileAgency() {
     <div className="profile-container">
       <div className="profile-header">
         <img src={Group8} className="img-top" />
+
+        {console.log(agency, "id")}
         <h1>Profile Agensi</h1>
       </div>
       <div className="profile-content">

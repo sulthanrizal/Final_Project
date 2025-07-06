@@ -11,6 +11,7 @@ export const dataAgency = [
     description: "A collection of full service agencies.",
     image: "",
     agencies: Array.from({ length: 22 }).map((_, i) => ({
+      id: i + 1,
       nameCompany: `Paragon ${i + 1}`,
       description: `Bunga Mekar adalah Event Organizer spesialis pernikahan yang menghadirkan konsep intimate, elegan, hingga megah sesuai impian Anda. Kami percaya bahwa setiap kisah cinta itu unik, dan momen sakral Anda layak dirayakan dengan penuh kehangatan, keindahan, dan kesempurnaan.`,
       image: Freska,
@@ -26,6 +27,7 @@ export const dataAgency = [
     description: "A collection of wedding organizers.",
     image: Freska,
     agencies: Array.from({ length: 25 }).map((_, i) => ({
+      id: 23 + i,
       nameCompany: `Agency ${i + 1}`,
       description: `Bunga Mekar adalah Event Organizer spesialis pernikahan yang menghadirkan konsep intimate, elegan, hingga megah sesuai impian Anda. Kami percaya bahwa setiap kisah cinta itu unik, dan momen sakral Anda layak dirayakan dengan penuh kehangatan, keindahan, dan kesempurnaan.`,
       image: Freska,
@@ -41,6 +43,7 @@ export const dataAgency = [
     description: "A collection of EO Spesialis MICE.",
     image: Freska,
     agencies: Array.from({ length: 20 }).map((_, i) => ({
+      id: 48 + i,
       nameCompany: `Agency ${i + 1}`,
       description: `Bunga Mekar adalah Event Organizer spesialis pernikahan yang menghadirkan konsep intimate, elegan, hingga megah sesuai impian Anda. Kami percaya bahwa setiap kisah cinta itu unik, dan momen sakral Anda layak dirayakan dengan penuh kehangatan, keindahan, dan kesempurnaan.`,
       image: Freska,
@@ -56,6 +59,7 @@ export const dataAgency = [
     description: "A collection of Brand Activation Agency.",
     image: Freska,
     agencies: Array.from({ length: 17 }).map((_, i) => ({
+      id: 68 + i,
       nameCompany: `Agency ${i + 1}`,
       description: `Bunga Mekar adalah Event Organizer spesialis pernikahan yang menghadirkan konsep intimate, elegan, hingga megah sesuai impian Anda. Kami percaya bahwa setiap kisah cinta itu unik, dan momen sakral Anda layak dirayakan dengan penuh kehangatan, keindahan, dan kesempurnaan.`,
       image: Freska,
@@ -71,6 +75,7 @@ export const dataAgency = [
     description: "A collection of EO Virtual & Hybrid.",
     image: Freska,
     agencies: Array.from({ length: 20 }).map((_, i) => ({
+      id: 85 + i,
       nameCompany: `Agency ${i + 1}`,
       description: `Bunga Mekar adalah Event Organizer spesialis pernikahan yang menghadirkan konsep intimate, elegan, hingga megah sesuai impian Anda. Kami percaya bahwa setiap kisah cinta itu unik, dan momen sakral Anda layak dirayakan dengan penuh kehangatan, keindahan, dan kesempurnaan.`,
       image: Freska,

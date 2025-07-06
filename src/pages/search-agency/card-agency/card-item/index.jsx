@@ -3,22 +3,12 @@ import "./index.scss";
 import { faLocationDot, faStar } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 export function CardItemAgency({ data }) {
-  function IconStar({ amount }) {
-    return (
-      <>
-        {[...Array(amount)].map((_, i) => (
-          <FontAwesomeIcon key={i} icon={faStar} className="icon-start" />
-        ))}
-      </>
-    );
-  }
-
   return (
     <>
       {data.map((item, index) => {
         const img = item.image;
         return (
-          <div className="card-agency" key={index}>
+          <div className="card-agency" key={item.id}>
             <div className="card-header">
               <img src={img} />
               <div className="group-header">
@@ -50,7 +40,7 @@ export function CardItemAgency({ data }) {
             </div>
             <div className="card-bottom">
               <p className="text-price">Mulai dari {item.price}</p>
-              <Link className="text-profile" to={`/profile-agency/${index}`}>
+              <Link className="text-profile" to={`/profile-agency/${item.id}`}>
                 Lihat Profil
               </Link>
             </div>
