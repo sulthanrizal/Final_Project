@@ -115,7 +115,6 @@ export default function SearchAgency() {
                 >
                   <h5
                     style={{
-                      color: "black",
                       color: "#1E7B89",
                       fontSize: "20px",
                     }}
@@ -148,7 +147,6 @@ export default function SearchAgency() {
                 >
                   <h5
                     style={{
-                      color: "black",
                       color: "#1E7B89",
                       fontSize: "20px",
                     }}
@@ -181,7 +179,6 @@ export default function SearchAgency() {
                 >
                   <h5
                     style={{
-                      color: "black",
                       color: "#1E7B89",
                       fontSize: "20px",
                     }}

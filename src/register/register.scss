@@ -1,0 +1,125 @@
+.register-container {
+  display: flex;
+  height: 100vh;
+  background-color: white;
+  .register-wrapper-left {
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, #0a4952, #1190a3);
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 27px;
+    .title {
+      font-size: 36px;
+      font-weight: 600;
+      width: 350px;
+      text-align: center;
+    }
+    .text {
+      width: 400px;
+      text-align: center;
+    }
+    .to-login {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      .text-link {
+        padding: 10px 64px;
+        border: 1px solid white;
+        border-radius: 10px;
+        width: fit-content;
+        text-decoration: none;
+
+        &:hover {
+          border: 1px solid #1190a3;
+          background: #1190a3;
+        }
+      }
+    }
+  }
+
+  .register-wrapper-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    .register-card {
+      background-color: white;
+      padding: 40px 30px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .register-title {
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 48px;
+      font-weight: 700;
+      color: #1190a3;
+    }
+
+    .register-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .login-form-group {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          margin-bottom: 6px;
+          color: #0a4952;
+          font-size: 20px;
+        }
+
+        input {
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+          margin-bottom: 16px;
+          font-size: 1rem;
+          width: 533px;
+        }
+      }
+      button {
+        padding: 10px;
+        background-color: #1190a3;
+        width: 296px;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background-color: #0a4952;
+        }
+      }
+      .register-link {
+        margin-top: 12px;
+        text-align: center;
+        font-size: 14px;
+
+        color: black;
+
+        a {
+          color: #0a4952;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

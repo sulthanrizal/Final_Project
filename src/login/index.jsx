@@ -30,36 +30,42 @@ export function Login() {
 
   return (
     <div className="login-container">
+      <div className="login-welcome">
+        <h1 className="title">Selamat Datang di EventMatch.id</h1>
+        <p className="text">
+          Agar Selalu terhubung dengan kami silahkan untuk Masuk
+        </p>
+
+        <Link to="/register" className="text-link">
+          Buat Akun
+        </Link>
+      </div>
       <div className="login-card">
-        <h2 className="login-title">Login to Your Account</h2>
+        <h2 className="login-title">Login</h2>
         <form className="login-form" onSubmit={handleSubmit}>
-          <label>Email</label>
-          <input
-            type="email"
-            placeholder="Masukkan email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-
-          <label>Password</label>
-          <input
-            type="password"
-            placeholder="Masukkan password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-
+          <div className="login-form-group">
+            <label>Email</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="login-form-group">
+            <label>Password</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
           <button type="submit" disabled={loading}>
-            {loading ? 'Logging in...' : 'Login'}
+            {loading ? "Sedang Login..." : "Login"}
           </button>
 
           {error && <p className="error-message">{error}</p>}
-
-          <p className="login-link">
-            Belum punya akun? <Link to="/register">Daftar di sini</Link>
-          </p>
         </form>
       </div>
     </div>

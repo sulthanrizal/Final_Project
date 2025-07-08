@@ -4,10 +4,10 @@ import ScrollToTop from "./components/ScrollToTop";
 import HomePage from "./pages/home-page";
 import SearchAgency from "./pages/search-agency";
 import { Login } from "./login";
-import { Register } from "./login/register";
 import Layout from "./components/Layout";
 import { ProfileAgency } from "./pages/profile-agency";
 import BookingAgency from "./pages/booking-agency";
+import { Register } from "./register/register";
 
 function App() {
   return (
