@@ -1,3 +1,5 @@
+import Qris from "../../../assets/qris.png";
+
 export function BookingForm({
   handleInputChange,
   handleFileChange,
@@ -234,24 +236,28 @@ export function BookingForm({
                 </div>
               </div>
             </div>
-            <div
-              style={{ display: "flex", flexDirection: "column", gap: "20px" }}
-            >
-              <div
-                className="form-group notes"
-                style={{ border: "1px solid white" }}
-              >
-                <p>
-                  <h4>Catatan</h4> {formData.notes}
-                </p>
-              </div>
-              <div
-                className="form-group price"
-                style={{ border: "1px solid white" }}
-              >
-                <h4>Total Harga</h4>
-                <div>
-                  <p>Total Estimasi Biaya </p>
+          </div>
+          <div className="notes-price">
+            <div className="notes">
+              <h4>Catatan</h4>
+              <p className="text-notes">{formData.notes}</p>
+            </div>
+            <div className="price-group">
+              <h4>Total Harga</h4>
+              <div className="price-list">
+                <div className="price-col">
+                  <p className="price-noted">Total Estimasi Biaya </p>
+                  <p className="price">Rp. 85.000.000,00</p>
+                </div>
+                <div className="price-col">
+                  <p className="price-noted">
+                    Uang Muka {"("}DP 20%{")"}{" "}
+                  </p>
+                  <p className="price">Rp. 17.000.000,00</p>
+                </div>
+                <div className="price-col">
+                  <p className="price-noted">Sisa Pembayaran H-7 Acara</p>
+                  <p className="price">Rp. 68.000.000,00</p>
                 </div>
               </div>
             </div>
@@ -270,15 +276,16 @@ export function BookingForm({
       {currentStep === 4 && (
         <div className="form-step payment-step">
           <h3>Bayar DP</h3>
-          <p>
-            Silakan lakukan pembayaran DP sebesar{" "}
-            <strong>Rp 1.000.000,-</strong> melalui scan QRIS di bawah ini.
-          </p>
-          <img
-            src={QRIS_IMAGE_URL}
-            alt="QRIS Code for Payment"
-            className="qris-image"
-          />
+          <div className="img-qris">
+            <h4 className="name-company">{agency.nameCompany}</h4>
+            <img src={Qris} className="qris" />
+            <img
+              src={QRIS_IMAGE_URL}
+              alt="QRIS Code for Payment"
+              className="qris-image"
+            />
+            <p className="text-nmid">NMID: 10210210120354144740</p>
+          </div>
           <p className="payment-note">
             Setelah melakukan pembayaran, simpan bukti transfer Anda untuk
             diunggah pada langkah berikutnya.
@@ -299,10 +306,13 @@ export function BookingForm({
           className="form-step confirm payment-receipt"
           onSubmit={handleSubmit}
         >
-          <h3>Upload Bukti Transfer</h3>
+          <h3>Upload Bukti Pembayaran</h3>
           <div className="form-group upload-area">
             <label htmlFor="file-upload" className="upload-label">
-              Klik untuk memilih file
+              Pilih File disini
+            </label>
+            <label className="upload-label-format">
+              *Upload Bukti Pembayaran Format PNG, JPG, JPEG, PDF
             </label>
             <input
               required
