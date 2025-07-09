@@ -64,3 +64,39 @@
     bottom: 0;
   }
 }
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .container-footer {
+    padding: 2rem;
+
+    .footer-content {
+      flex-direction: column;
+      padding: 0;
+      gap: 2rem;
+
+      .footer-sosmed {
+        .text-sosmed {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .container-footer {
+    padding: 1rem;
+
+    .footer-content {
+      .footer-nav {
+        align-items: center;
+      }
+    }
+
+    .absolute {
+      display: none;
+    }
+  }
+}
