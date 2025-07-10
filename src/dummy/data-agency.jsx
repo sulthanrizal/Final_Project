@@ -33,7 +33,7 @@ export const dataAgency = [
       amountRiview: 2000,
       category: "Full Service Agenchy",
       price: getRandomElement(prices),
-      rating: i % 2 === 0 ? 5 : 4,
+      rating: i == 2 ? 4 : 5,
     })),
   },
   {
@@ -49,7 +49,7 @@ export const dataAgency = [
       amountRiview: 2000,
       category: "Wedding Organizer - WO",
       price: getRandomElement(prices),
-      rating: i % 2 === 0 ? 5 : 4,
+      rating: i == 2 ? 4 : 5,
     })),
   },
   {
@@ -65,7 +65,7 @@ export const dataAgency = [
       amountRiview: 2000,
       category: "EO Spesialis MICE",
       price: getRandomElement(prices),
-      rating: i % 2 === 0 ? 5 : 4,
+      rating: i == 2 ? 4 : 5,
     })),
   },
   {
@@ -81,7 +81,7 @@ export const dataAgency = [
       amountRiview: 2000,
       category: "Social Event Organizer",
       price: getRandomElement(prices),
-      rating: i % 2 === 0 ? 5 : 4,
+      rating: i == 2 ? 4 : 5,
     })),
   },
   {
@@ -97,7 +97,7 @@ export const dataAgency = [
       amountRiview: 2000,
       category: "EO Virtual & Hybrid",
       price: getRandomElement(prices),
-      rating: i % 2 === 0 ? 5 : 4,
+      rating: i == 2 ? 4 : 5,
     })),
   },
   {
@@ -113,7 +113,7 @@ export const dataAgency = [
       amountRiview: 2000,
       category: "Brand Activation Agency",
       price: getRandomElement(prices),
-      rating: i % 2 === 0 ? 5 : 4,
+      rating: i == 2 ? 4 : 5,
     })),
   },
   {
@@ -129,7 +129,7 @@ export const dataAgency = [
       amountRiview: 2000,
       category: "Brand Activation Agency",
       price: getRandomElement(prices),
-      rating: i % 2 === 0 ? 5 : 4,
+      rating: i == 2 ? 4 : 5,
     })),
   },
   {
@@ -145,7 +145,7 @@ export const dataAgency = [
       amountRiview: 2000,
       category: "Sport Event Organizer",
       price: getRandomElement(prices),
-      rating: i % 2 === 0 ? 5 : 4,
+      rating: i == 2 ? 4 : 5,
     })),
   },
 ];
