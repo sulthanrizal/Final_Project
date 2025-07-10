@@ -1,7 +1,21 @@
 import Freska from "../assets/Freska.png";
 
 const locations = ["Jakarta", "Surabaya", "Bandung", "Yogyakarta", "Medan"];
-const prices = ["10 Jt", "15 Jt", "20 Jt", "25 Jt", "30 Jt"];
+const prices = [
+  "10 Jt",
+  "15 Jt",
+  "20 Jt",
+  "25 Jt",
+  "30 Jt",
+  "35 Jt",
+  "40 Jt",
+  "45 Jt",
+  "50 Jt",
+  "55 Jt",
+  "60 Jt",
+  "65 Jt",
+  "70 Jt",
+];
 
 const getRandomElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
@@ -23,8 +37,8 @@ export const dataAgency = [
     })),
   },
   {
-    nameCategory: "Wedding Organizers",
-    description: "A collection of wedding organizers.",
+    nameCategory: "Wedding Organizer - WO",
+    description: "A collection of Wedding Organizer - WO.",
     image: Freska,
     agencies: Array.from({ length: 25 }).map((_, i) => ({
       id: 23 + i,
@@ -33,7 +47,7 @@ export const dataAgency = [
       image: Freska,
       address: getRandomElement(locations),
       amountRiview: 2000,
-      category: "Wedding Organizers",
+      category: "Wedding Organizer - WO",
       price: getRandomElement(prices),
       rating: i % 2 === 0 ? 5 : 4,
     })),
@@ -55,8 +69,8 @@ export const dataAgency = [
     })),
   },
   {
-    nameCategory: "Brand Activation Agency",
-    description: "A collection of Brand Activation Agency.",
+    nameCategory: "Social Event Organizer",
+    description: "A collection of Social Event Organizer.",
     image: Freska,
     agencies: Array.from({ length: 17 }).map((_, i) => ({
       id: 68 + i,
@@ -65,7 +79,7 @@ export const dataAgency = [
       image: Freska,
       address: getRandomElement(locations),
       amountRiview: 2000,
-      category: "Brand Activation Agency",
+      category: "Social Event Organizer",
       price: getRandomElement(prices),
       rating: i % 2 === 0 ? 5 : 4,
     })),
@@ -82,6 +96,54 @@ export const dataAgency = [
       address: getRandomElement(locations),
       amountRiview: 2000,
       category: "EO Virtual & Hybrid",
+      price: getRandomElement(prices),
+      rating: i % 2 === 0 ? 5 : 4,
+    })),
+  },
+  {
+    nameCategory: "Brand Activation Agency",
+    description: "A collection of Brand Activation Agency.",
+    image: Freska,
+    agencies: Array.from({ length: 20 }).map((_, i) => ({
+      id: 85 + i,
+      nameCompany: `Agency ${i + 1}`,
+      description: `Bunga Mekar adalah Event Organizer spesialis pernikahan yang menghadirkan konsep intimate, elegan, hingga megah sesuai impian Anda. Kami percaya bahwa setiap kisah cinta itu unik, dan momen sakral Anda layak dirayakan dengan penuh kehangatan, keindahan, dan kesempurnaan.`,
+      image: Freska,
+      address: getRandomElement(locations),
+      amountRiview: 2000,
+      category: "Brand Activation Agency",
+      price: getRandomElement(prices),
+      rating: i % 2 === 0 ? 5 : 4,
+    })),
+  },
+  {
+    nameCategory: "Brand Activation Agency",
+    description: "A collection of Brand Activation Agency.",
+    image: Freska,
+    agencies: Array.from({ length: 20 }).map((_, i) => ({
+      id: 85 + i,
+      nameCompany: `Agency ${i + 1}`,
+      description: `Bunga Mekar adalah Event Organizer spesialis pernikahan yang menghadirkan konsep intimate, elegan, hingga megah sesuai impian Anda. Kami percaya bahwa setiap kisah cinta itu unik, dan momen sakral Anda layak dirayakan dengan penuh kehangatan, keindahan, dan kesempurnaan.`,
+      image: Freska,
+      address: getRandomElement(locations),
+      amountRiview: 2000,
+      category: "Brand Activation Agency",
+      price: getRandomElement(prices),
+      rating: i % 2 === 0 ? 5 : 4,
+    })),
+  },
+  {
+    nameCategory: "Sport Event Organizer",
+    description: "A collection of Sport Event Organizer.",
+    image: Freska,
+    agencies: Array.from({ length: 20 }).map((_, i) => ({
+      id: 85 + i,
+      nameCompany: `Agency ${i + 1}`,
+      description: `Bunga Mekar adalah Event Organizer spesialis pernikahan yang menghadirkan konsep intimate, elegan, hingga megah sesuai impian Anda. Kami percaya bahwa setiap kisah cinta itu unik, dan momen sakral Anda layak dirayakan dengan penuh kehangatan, keindahan, dan kesempurnaan.`,
+      image: Freska,
+      address: getRandomElement(locations),
+      amountRiview: 2000,
+      category: "Sport Event Organizer",
       price: getRandomElement(prices),
       rating: i % 2 === 0 ? 5 : 4,
     })),
